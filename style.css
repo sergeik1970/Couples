@@ -5,6 +5,8 @@
 }
 
 body {
+    background-image: url(images/Фон.png);
+    background-size: cover;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -79,6 +81,7 @@ body {
     border-radius: 40px;
     padding: 20px;
     cursor: pointer;
+    background: transparent;
 }
 
 .button:hover {
@@ -89,7 +92,7 @@ body {
 
 .table {
     display: grid;
-    min-width: 500px;
+    min-width: 300px;
     max-width: 1000px;
     margin-bottom: 20px;
     gap: 10px;
@@ -109,4 +112,33 @@ body {
 
 .card:hover {
     background-color: rgba(218, 69, 218, 1);
+}
+
+.card.flip {
+    background: rgb(225, 18, 132);
+    transform: perspective(100px) rotateY(180deg);
+    user-select: none;
+}
+
+.default-icon {
+    display: block;
+    pointer-events: none;
+}
+
+.flipped-icon {
+    display: none;
+    pointer-events: none;
+}
+
+.card.flip .flipped-icon {
+    display: block;
+}
+
+.card.flip .default-icon {
+    display: none;
+}
+
+.card.successfully {
+    background: rgb(29, 208, 50);
+    transform: scale(0.95);
 }
